@@ -56,6 +56,7 @@ namespace Ficheiro_de_texto
             string texto = textBox.Text;
 
             char[] separator = {' '};
+            texto = texto.Replace(Environment.NewLine, " ");
 
             int wordsCount = texto.Split(separator, StringSplitOptions.RemoveEmptyEntries).Length;
             labpalavras.Text = wordsCount.ToString();
